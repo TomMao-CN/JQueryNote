@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery效果</title>
+    <script type="text/javascript" src="jsFiles/jquery-3.4.1.js"></script>
+    <script>
+        //可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+        //可选的 callback 参数是隐藏或显示完成后所执行的函数名称。
+
+        //元素隐藏
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("#p1").hide();
+            });
+        });
+        //元素显示
+        $(document).ready(function(){
+            $("#button2").click(function(){
+                $("#p1").show();
+            });
+        });
+        //隐藏和显示
+        $(document).ready(function(){
+            $("#button3").click(function(){
+                $("#p2").toggle(1000);
+            });
+        });
+         //元素淡入
+         $(document).ready(function(){
+            $("#button4").click(function(){
+                $("#p3").fadeIn("slow");
+            });
+        });
+        //元素淡出
+        $(document).ready(function(){
+            $("#button5").click(function(){
+                $("#p3").fadeOut("slow")
+            });
+        });
+        //元素淡入/淡出
+        $(document).ready(function(){
+            $("#button6").click(function(){
+                $("#p4").fadeToggle("slow")
+            });
+        });
+         //元素淡入/淡出
+         $(document).ready(function(){
+            $("#button7").click(function(){
+                $("#p5").fadeTo("slow",0.25);
+            });
+        });
+         //元素滑下
+         $(document).ready(function(){
+            $("#button8").click(function(){
+                $("#div1").slideDown("slow");
+            });
+        });
+        //元素滑上
+        $(document).ready(function(){
+            $("#button9").click(function(){
+                $("#div1").slideUp("slow");
+            });
+        });
+         //元素滑上/滑下
+         $(document).ready(function(){
+            $("#button10").click(function(){
+                $("#div1").slideToggle("slow");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p id="p1">这是hide和show的p元素</p>
+    <button id="button1">隐藏</button>
+    <button id="button2">显示</button>
+    <br/>
+    <p id="p2">这是toggle的p元素</p>
+    <button id="button3">显示/隐藏</button>
+    <br/>
+    <p id="p3">这是fadeIn和fadeOut的p元素</p>
+    <button id="button4">淡入</button>
+    <button id="button5">淡出</button>
+    <br/>
+    <p id="p4">这是fadeToggle的p元素</p>
+    <button id="button6">淡入/淡出</button>
+    <br/>
+    <p id="p5">这是fadeTo的p元素</p>
+    <button id="button7">淡出到指定的不透明度</button>
+    <br/>
+    <div id="div1">
+        <p>这个是p元素</p>
+        <p>这个是p元素</p>
+        <p>这个是p元素</p>
+    </div>
+    <button id="button8">滑下</button>
+    <button id="button9">滑上</button>
+    <button id="button10">滑上/滑下</button>
+    <br/>
+
+</body>
+</html>

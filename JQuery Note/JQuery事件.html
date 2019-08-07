@@ -7,48 +7,48 @@
     <title>JQuery事件</title>
     <script type="text/javascript" src="jsFiles/jquery-3.4.1.js"></script>
     <style>
-        div{
+        #div1{
             width: 100px;
             height: 100px;
             border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
         }
     </style>
     <script>
         //单击事件
         $(document).ready(function(){
             $("#p1").click(function(){
-                $("div").css("background-color","red");
+                $("#div1").css("background-color","red");
             });
         });
         //双击事件
         $(document).ready(function(){
             $("#p2").dblclick(function(){
-                $("div").css("background-color","black");
+                $("#div1").css("background-color","black");
             });
         });
-        //获得焦点事件
+        //获得焦点事件(用于输入框)
         $(document).ready(function(){
-            $("input").focus(function(){
-                $("div").css("background-color","green");
+            $("input1").focus(function(){
+                $("#div1").css("background-color","green");
             });
         });
         //鼠标悬停事件
         $(document).ready(function(){
-            $("#p4").mouseover(function(){
-                $("div").css("background-color","blue");
+            $("#p3").mouseover(function(){
+                $("#div1").css("background-color","blue");
             });
         });
     </script>
 </head>
 <body>
-    <div>盒子</div>
+    <div id="div1">盒子</div>
 
     <p id="p1">p1</p>
     <p id="p2">p2</p>
-
-    输入：<input/>
-
-    <p id="p4">p4</p>
+    输入：<input id="input1"/>
+    <p id="p3">p4</p>
     <p id="p5">p5</p>
 </body>
 </html>
