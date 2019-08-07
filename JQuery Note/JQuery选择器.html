@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>JQuery选择器</title>
+	<script type="text/javascript" src="jsFiles/jquery-3.4.1.js"></script>
+	<script type="text/javascript">
+	//【一】、元素选择器
+		//1.元素选择器
+		$(document).ready(function () {
+			$("#button1").click(function () {
+				$("h5").hide();
+			});
+		});
+		//2.Id选择器
+		$(document).ready(function () {
+			$("#button2").click(function () {
+				$("p#test").hide();
+			});
+		});
+		//3.class选择器
+		$(document).ready(function () {
+			$("#button3").click(function () {
+				$("p.test").hide();
+			});
+		});
+	//【二】、CSS选择器
+		//JQuery使用CSS选择器改变元素的CSS属性
+		$(document).ready(function(){
+			$("#button4").click(function(){
+				$("#CSS").css("background-color","red");
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<h5>这是h5元素</h5>
+	<button id="button1">按钮</button>
+
+	<p id="test">这是带Id的p元素</p>
+	<button id="button2">按钮</button>
+
+	<p class="test">这是带class的p标签</p>
+	<button id="button3">按钮</button>
+
+	<p id="CSS">CSS属性选择器</p>
+	<button id="button4">按钮</button>
+</body>
+
+</html>
