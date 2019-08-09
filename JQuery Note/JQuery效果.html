@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JQuery效果</title>
+    <style>
+        #div2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: gold;
+            position: absolute;
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: gold;
+        }
+    </style>
     <script type="text/javascript" src="jsFiles/jquery-3.4.1.js"></script>
     <script>
         //可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
@@ -70,6 +85,34 @@
                 $("#div1").slideToggle("slow");
             });
         });
+        //元素的动画效果
+        //默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
+        //如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute。
+        $(document).ready(function(){
+            $("#button11").click(function(){
+                $("#div2").animate({
+                    left:'150px',
+                    height:'150px',
+                    width:'150px'
+                    },5000,function(){
+                        alert("这会在效果完成之后执行");
+                    });
+                    alert("这会在效果完成之前执行");
+            });
+        });
+        //stop函数可以对任何函数进行停止
+        $(document).ready(function(){
+            $("#button12").click(function(){
+                $("#div2").stop();
+            });
+        });
+        //效果连接Chaining
+        $(document).ready(function(){
+            $("#button13").click(function(){
+                $("#div3").hide("3000").show("3000");
+            });
+        });
+
 
     </script>
 </head>
@@ -100,6 +143,17 @@
     <button id="button9">滑上</button>
     <button id="button10">滑上/滑下</button>
     <br/>
+    <div id="div2">这是div2</div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <button id="button11">动画</button>
+    <button id="button12">停止效果</button>
+    <div id="div3">这是div3</div>
+    <button id="button13">效果连接</button>
 
 </body>
 </html>

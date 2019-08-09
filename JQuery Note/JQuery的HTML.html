@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery的HTML</title>
+    <script type="text/javascript" src="jsFiles/jquery-3.4.1.js"></script>
+    <script>       
+        $(document).ready(function () {
+            //获取Html的文本值
+            $("#button1").click(function () {
+                alert($("#p1").text());
+            });
+             //获取Html的html（包括html标记）
+            $("#button2").click(function () {
+                alert($("#p1").html());
+            });
+            //获得表单字段的值
+            $("#button3").click(function () {
+                alert($("#input1").val());
+            });
+            //获得元素属性的值
+            $("#button4").click(function () {
+                alert($("#a1").attr("href"));
+            });
+            //设置p2的text。其他html和val同理
+            $("#button5").click(function(){
+                $("#p2").text("设置p2的text");
+            });
+            //在指定元素的内部的尾部插入指定内容
+            $("#button6").click(function(){
+                $("#p3").append("<span>尾部添加内容</span>");
+            });
+            //在指定元素的内部的尾部插入指定内容
+            $("#button7").click(function(){
+                $("#p3").prepend("<span>头部添加内容</span>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="p1">这是p1<span></span></p>
+    <button id="button1">获取p1的文本</button>
+    <button id="button2">获取p1的html</button>
+    <br />
+    输入：<input id="input1" />
+    <br />
+    <button id="button3">获得表单字段的值</button>
+    <br/>
+    <a id="a1" href="https://www.baidu.com/">百度网址</a>
+    <button id="button4">获得元素属性的值</button>
+    <p id="p2">这是p2</p>
+    <button id="button5">设置p2的值</button>
+    <p id="p3">这是p3</p>
+    <button id="button6">往p3里尾部添加内容</button>
+    <button id="button7">往p3里头部添加内容</button>
+</body>
+
+</html>
